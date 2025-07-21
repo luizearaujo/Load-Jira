@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repository\sql\01_type_create_table.sql" />
+    <None Remove="Repository\sql\02_project_create_table.sql" />
+    <None Remove="Repository\sql\03_status_create_table.sql" />
+    <None Remove="Repository\sql\04_person_create_table.sql" />
+    <None Remove="Repository\sql\05_issue_create_table.sql" />
+    <None Remove="Repository\sql\06_detail_create_table.sql" />
+    <None Remove="Repository\sql\07_issue_alter_table_sp.sql" />
+    <None Remove="Repository\sql\08_issue_alter_table_time.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Repository\sql\04_person_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\08_issue_alter_table_time.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\07_issue_alter_table_sp.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\06_detail_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\05_issue_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\02_project_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\03_status_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\sql\01_type_create_table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoadJira.Config\LoadJira.Config.csproj" />
+    <ProjectReference Include="..\LoadJira.Entities\LoadJira.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

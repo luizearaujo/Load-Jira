@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LoadJira.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "time"
+    }
+  }
+}
